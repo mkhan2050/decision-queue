@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: decision-queue-db
+
+    environment:
+      POSTGRES_USER: decision_queue
+      POSTGRES_PASSWORD: decision_queue
+      POSTGRES_DB: decision_queue
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U decision_queue -d decision_queue"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

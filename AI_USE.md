@@ -1,21 +1,14 @@
-# AI use
+# AI Use Disclosure
 
-Complete this file before submission. If a section does not apply, write `None`.
+## ChatGPT (OpenAI)
 
-## Tools used
-
-Repeat this section for each AI tool.
-
-### [Tool name]
-
-- **Tasks the tool assisted:** [Describe the tasks.]
-- **Intermediate artifacts generated through AI use:** [List generated plans, drafts, code, tests, or other artifacts.]
-- **Important output checked or changed:** [Describe what you reviewed, tested, corrected, rejected, or rewrote.]
+- **Tasks assisted:** Requirement breakdown, debugging, UI/UX iteration, Docker/Prisma troubleshooting, automated test setup, and documentation support.
+- **How I used it:** I used ChatGPT as a development assistant to speed up iteration and troubleshoot issues while I made the product and implementation decisions.
+- **What I verified:** I reviewed the code changes, tested the request creation and decision workflows, verified PostgreSQL persistence, corrected issues when suggestions did not match the codebase, and ran the automated test suite until all 6 tests passed.
+- **My responsibility:** Final architecture, UI direction, implementation choices, debugging decisions, testing, and submission review remained my responsibility.
 
 ## Final review
 
-- [ ] I understand the important AI-assisted work in this repository.
-- [ ] I checked or changed important AI output before submission.
-- [ ] I did not include private or proprietary information in this file.
-
-Do not include full prompt transcripts. They can contain personal, account, private, or proprietary information.
+- [x] I understand the important AI-assisted work in this repository.
+- [x] I checked or changed important AI output before submission.
+- [x] I did not include private or proprietary information in this file.

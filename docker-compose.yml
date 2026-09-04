@@ -20,5 +20,19 @@ services:
       timeout: 5s
       retries: 5
 
+  app:
+    build: .
+    container_name: decision-queue-app
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    environment:
+      DATABASE_URL: "postgresql://decision_queue:decision_queue@db:5432/decision_queue"
+
+    ports:
+      - "3000:3000"
+
 volumes:
   postgres_data:
